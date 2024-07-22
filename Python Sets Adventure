@@ -1,0 +1,18 @@
+# Question 1 
+# Task 1 
+
+our_routes = {"LAX", "JFK", "CDG", "DXB"}
+competitor_routes = {"JFK", "CDG", "LHR", "BKK"}
+
+# 1. Destinations that both airlines fly to
+common_destinations = our_routes.intersection(competitor_routes)
+print("Common destinations:", common_destinations)
+
+# 2. Destinations unique to your airline
+unique_to_our_airline = our_routes.difference(competitor_routes)
+print("Unique to our airline:", unique_to_our_airline)
+
+# 3. Destinations that neither airline shares
+all_destinations = our_routes.union(competitor_routes)
+neither_shared = all_destinations.difference(our_routes.intersection(competitor_routes))
+print("Destinations neither airline shares:", neither_shared)
